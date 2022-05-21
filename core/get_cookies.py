@@ -1,13 +1,13 @@
-# (c) https://t.me/Mr_Robot_t
 
-from core.login import pdisk_login
+
+from core.login import doodstream_login
 
 PDisk_DB = {}
 
 
 async def get_cookies(username: str, password: str) -> str:
     if not PDisk_DB:
-        user_id, cookies = await pdisk_login(username, password)
+        user_id, cookies = await doodstream_login(username, password)
         PDisk_DB["cookies"] = cookies
         PDisk_DB["user_id"] = user_id
         PDisk_DB["username"] = username
